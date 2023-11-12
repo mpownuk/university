@@ -1,11 +1,22 @@
 #include <iostream>
 #include <cmath>
 #include <cstdlib>
+#include <cstring>
 
 using namespace std;
 
 int main()
 {
+
+    char ciagZnakow[100] = "";
+    cout << "== Program wypisujacy znaki z podanego ciagu znakow (jezyk C++) ==" << endl;
+    cout << "wprowadz ciag znakow (maksymalnie 100 znakow): " << endl;
+    cin >> ciagZnakow;
+
+    for ( int i = 0; i < strlen(ciagZnakow); i++){
+        cout << ciagZnakow[i] << endl;
+    }
+
    /*
     double x, n, result;
 
@@ -27,6 +38,7 @@ int main()
     } while (c != 'q' && c != 'Q');
     */
 
+    /*
     srand((unsigned) time(NULL));
 
         int randomNr = 1 + rand() % 100;
@@ -53,7 +65,7 @@ int main()
 
         }
         cout << "szukana liczba to: " << randomNr << " gra zakonczona" << endl;
-
+    */
 
     return 0;
 }

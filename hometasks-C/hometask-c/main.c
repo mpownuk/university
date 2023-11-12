@@ -2,11 +2,21 @@
 #include <math.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 int main()
 {
 
-/*
+    char ciagZnakow[100] = "";
+    printf("== Program wypisujacy znaki z podanego ciagu znakow (jezyk C) ==\n");
+    printf("wprowadz ciag znakow (maksymalnie 100 znakow): \n");
+    scanf("%s", ciagZnakow);
+
+    for (int i = 0; i < strlen(ciagZnakow); i++) {
+        printf("%c\n", ciagZnakow[i]);
+    }
+
+    /*
     double x, n, result;
     char c;
 
@@ -27,6 +37,7 @@ int main()
     } while (c != 'q' && c != 'Q');
     */
 
+    /*
      srand((unsigned)time(NULL));
 
     int randomNr = 1 + rand() % 100;
@@ -55,7 +66,7 @@ int main()
     }
 
     printf("szukana liczba to: %d gra zakonczona\n", randomNr);
-
+    */
 
     return 0;
 }
