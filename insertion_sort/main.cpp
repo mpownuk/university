@@ -2,8 +2,8 @@
 
 using namespace std;
 
-void insertionSort( int arr[], int n);
 void printArr(int arr[], int n);
+void insertionSort( int arr[], int n);
 void sortAndPrint(int arr[], int n);
 
 int main()
@@ -32,6 +32,7 @@ void insertionSort( int arr[], int n)
             while( j>=0 && arr[j] > key){ // if first value of arr is greater than second value
                 arr[j+1] = arr[j]; // second value has value of first value
                 j--; // j = -1 -> loop break
+                printArr( arr, n);
             }
             arr[j+1] = key; // j+1 = 0 -> first element of arr has value of KEY which is previous second value, before while loop
         }
