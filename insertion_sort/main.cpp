@@ -28,7 +28,7 @@ void insertionSort( int arr[], int n)
     {
     for(int i = 1; i < n; i++){ // i is 1
             int j = i-1; // j is 0
-            int key = arr[i]; // i is second walue of arr in first iteration
+            int key = arr[i]; // key is second walue of arr in first iteration
             while( j>=0 && arr[j] > key){ // if first value of arr is greater than second value
                 arr[j+1] = arr[j]; // second value has value of first value
                 j--; // j = -1 -> loop break
