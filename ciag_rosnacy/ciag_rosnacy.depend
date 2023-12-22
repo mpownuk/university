@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1703281666 source:/home/marek/Pulpit/STUDIA/semestr 1/programowanie/ciag_rosnacy/main.cpp
+	<iostream>
+	<vector>
+
