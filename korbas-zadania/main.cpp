@@ -1,4 +1,7 @@
 #include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -93,10 +96,61 @@ void dynamicArr(){
     delete[] tab;
 }
 
+// zad 7.4
+
+void reverseStringArr(){
+    int N;
+    do {
+        cin >> N;
+    } while (N < 0);
+
+    string *tab = new string[N];
+    for (int i = 0; i < N; i++){
+        cin >> tab[i];
+    }
+
+    for ( int i = N-1; i>=0; i--){
+        for( int j=tab[i].length()-1; j>=0; j--){
+            cout << tab[i][j];
+        }
+        cout << " ";
+    }
+
+    delete [] tab;
+}
+
+// zad 7.5
+void staticRandomIntArr(){
+    int TAB[100],N=0, *TT;
+    for (int i =0; i < 100; i++){
+        TAB[i] = (int)rand() % 10;
+        if(TAB[i]> 5){
+            N++;
+        }
+    }
+
+    TT = new int[N];
+    int j=0;
+    for ( int i = 0; i < 100; i++){
+        if(TAB[i]>5){
+            TT[j] = TAB[i];
+            j++;
+        }
+    }
+
+    for (int i = N-1; i >=0; i--){
+        cout << TT[i] << " ";
+    }
+    delete [] TT;
+}
+
 int main()
 {
-dynamicArr();
+    srand(time(NULL));
 
+    staticRandomIntArr();
+//    reverseStringArr();
+//    dynamicArr();
 //    pointers();
 //    write10NumsBackFrom20();
 //    writeIntFromBack();

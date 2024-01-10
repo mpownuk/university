@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1704916428 source:/home/marek/Pulpit/STUDIA/semestr 1/programowanie/korbas-zadania/main.cpp
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+
