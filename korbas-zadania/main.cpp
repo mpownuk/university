@@ -144,11 +144,34 @@ void staticRandomIntArr(){
     delete [] TT;
 }
 
+// zad 5.6
+    double POT ( double a, int num){
+        int sum = 1;
+        for ( int i = 1; i <= num; i++){
+            sum *= a;
+        }
+        return sum;
+    }
+
+void POTWraper(){
+    double R = 0;
+    int n = 0;
+    cin >> R;
+    cin >> n;
+    for (int i=1;i<=n;i++){
+        cout << POT (R,i);
+        if (i<20){
+            cout << " ";
+        }
+    }
+    cout << endl;
+}
+
 int main()
 {
     srand(time(NULL));
-
-    staticRandomIntArr();
+    POTWraper();
+//    staticRandomIntArr();
 //    reverseStringArr();
 //    dynamicArr();
 //    pointers();
