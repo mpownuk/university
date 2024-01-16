@@ -54,15 +54,14 @@ int checkGrowth(const Test& test){
         }
         if (in == out){
             return counter;
-        } else if(in * 2 - 100 >= out){
+        } else if(in * 2 - 100 > out){
             in = in - 100;
             sh2--;
             counter++;
 
             cout << in << " " << counter << endl;
 
-        }
-        else if(in - 100 <= 0){
+        } else if(in - 100 <= 0){
             in = in * 2;
             sh1--;
             counter++;

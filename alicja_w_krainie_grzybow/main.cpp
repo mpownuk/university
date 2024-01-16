@@ -13,16 +13,7 @@ int checkGrowth(const Test& test);
 
 int main() {
 
-// =========================================================== Podac sciezki w Windowsie:
-// =========================================================== Podac sciezki w Windowsie:
-// =========================================================== Podac sciezki w Windowsie:
-// =========================================================== Podac sciezki w Windowsie:
-// =========================================================== Podac sciezki w Windowsie:
-
 /*
-    ifstream inputFile("C:\\A.in");
-    ofstream outputFile("C:\\A.out");
-*/
 
     const char* homeDir = getenv("HOME");
 
@@ -37,6 +28,12 @@ int main() {
     ifstream inputFile(inputFilePath);
     ofstream outputFile(outputFilePath);
 
+*/
+///*
+    ifstream inputFile("C:\\A.in");
+    ofstream outputFile("C:\\A.out");
+
+//*/
 
     if (!inputFile.is_open()) {
         cerr << "Blad podczas otwierania pliku wejsciowego" << endl;
@@ -76,15 +73,14 @@ int checkGrowth(const Test& test){
         }
         if (in == out){
             return counter;
-        } else if(in * 2 - 100 >= out){
+        } else if(in * 2 - 100 > out){
             in = in - 100;
             sh2--;
             counter++;
 
             cout << in << " " << counter << endl;
 
-        }
-        else if(in - 100 <= 0){
+        } else if(in - 100 <= 0){
             in = in * 2;
             sh1--;
             counter++;
