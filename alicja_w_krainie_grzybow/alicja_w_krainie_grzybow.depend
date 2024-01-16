@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1700679186 source:/home/marek/Pulpit/STUDIA/semestr 1/programowanie/alicja_w_krainie_grzybow/main.cpp
+1705395560 source:/home/marek/Pulpit/STUDIA/semestr 1/programowanie/alicja_w_krainie_grzybow/main.cpp
 	<iostream>
 	<sstream>
 	<string>
 	<limits>
+	<fstream>
 

@@ -1,67 +1,110 @@
 #include <iostream>
-#include <sstream>
-#include <string>
-#include <limits>
+#include <fstream>
 
 using namespace std;
 
-void checkGrowth(int initialGrowth, int targetGrowth, int shroom1, int shroom2){
-    int in = initialGrowth, out = targetGrowth, sh1 = shroom1, sh2 = shroom2, counter = 0;
-    while(sh1 >= -1 && sh2 >= -1){
-        if(sh1 < 0 || sh2 < 0){
-            cout << "NIE" << endl;
-            break;
-        }
-        if(in < out){
-            in = in*2;
-            sh1--;
-            counter++;
-        } else if (in > out){
-            in = in -100;
-            if(in < 0){
-                cout << "NIE" << endl;
-                break;
-            }
-            sh2--;
-            counter++;
-        } else if (in == out){
-            cout  << counter << endl;
-            break;
-        }
+struct Test {
+    int initialGrowth;
+    int targetGrowth;
+};
+
+int checkGrowth(const Test& test);
+
+
+int main() {
+
+// =========================================================== Podac sciezki w Windowsie:
+// =========================================================== Podac sciezki w Windowsie:
+// =========================================================== Podac sciezki w Windowsie:
+// =========================================================== Podac sciezki w Windowsie:
+// =========================================================== Podac sciezki w Windowsie:
+
+/*
+    ifstream inputFile("C:\\A.in");
+    ofstream outputFile("C:\\A.out");
+*/
+
+    const char* homeDir = getenv("HOME");
+
+    if (homeDir == nullptr) {
+        cerr << "Error getting home directory." << endl;
+        return 1;
     }
-}
 
-int main()
-{
-    int testTabLenght, i=0, multiplyMushroom = 8, substractMushroom = 8;
-    do {
-    cin >> testTabLenght;
-        if (cin.fail()){
-            cin.clear();
-            cin.ignore();
-        }
-    } while (testTabLenght < 1 || testTabLenght >100);
+    string inputFilePath = string(homeDir) + "/A.in";
+    string outputFilePath = string(homeDir) + "/A.out";
 
-    cin.ignore();
-    int testTab[testTabLenght][2] = {};
+    ifstream inputFile(inputFilePath);
+    ofstream outputFile(outputFilePath);
 
-    while(i<testTabLenght){
-        string input;
-        int num1, num2;
-        getline(cin, input);
-        istringstream nums(input);
 
-        if(nums >> num1 >> num2 && (num1 > 0 && num1 < 100001) && (num2 > 0 && num2 < 100001)){
-            testTab[i][0] = num1;
-            testTab[i][1] = num2;
-            i++;
+    if (!inputFile.is_open()) {
+        cerr << "Blad podczas otwierania pliku wejsciowego" << endl;
+        return 1;
+    }
+
+    if (!outputFile.is_open()) {
+        cerr << "Blad podczas otwioerania pliku wyjsciowego." << endl;
+        return 1;
+    }
+
+    int initialGrowth, targetGrowth, testTabLength;
+
+    inputFile >> testTabLength;
+
+    for (int i = 0; i < testTabLength; i++) {
+        Test currentTest;
+        inputFile >> currentTest.initialGrowth >> currentTest.targetGrowth;
+
+        int result = checkGrowth(currentTest);
+
+        if (result == -1) {
+            outputFile << "NIE" << endl;
         } else {
+            outputFile << result << endl;
         }
-    }
-
-    for ( int j = 0; j < testTabLenght; j++){
-        checkGrowth(testTab[j][0], testTab[j][1], multiplyMushroom, substractMushroom);
     }
 
     return 0;
+}
+
+int checkGrowth(const Test& test){
+    int in = test.initialGrowth, out = test.targetGrowth, sh1 = 8, sh2 = 8, counter = 0;
+    while(sh1 >= 0 && sh2 >= 0){
+        if(in <= 0){
+            return -1;
+        }
+        if (in == out){
+            return counter;
+        } else if(in * 2 - 100 >= out){
+            in = in - 100;
+            sh2--;
+            counter++;
+
+            cout << in << " " << counter << endl;
+
+        }
+        else if(in - 100 <= 0){
+            in = in * 2;
+            sh1--;
+            counter++;
+
+            cout << in << " " << counter << endl;
+
+        } else if(in < out){
+            in = in*2;
+            sh1--;
+            counter++;
+
+            cout << in << " " << counter <<endl;
+
+        } else if (in > out){
+            in = in -100;
+            sh2--;
+            counter++;
+
+            cout << in << " " << counter <<endl;
+        }
+    }
+    return -1;
 }

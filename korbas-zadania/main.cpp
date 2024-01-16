@@ -5,6 +5,25 @@
 
 using namespace std;
 
+void fref(int &a){
+    a = -a*2;
+}
+
+void fptr(int *a){
+    *a = -*a*2;
+}
+
+int main (){
+    int b = 10;
+    fref(b);
+    cout << b<< endl;
+
+    fptr(&b);
+    cout << b<< endl;
+return 0;
+}
+
+/*
 // zad 4.1:
 void tenCharTab(){
 
@@ -181,3 +200,6 @@ int main()
 //    isIntYinArr();
     return 0;
 }
+
+
+*/
