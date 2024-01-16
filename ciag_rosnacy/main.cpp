@@ -1,5 +1,7 @@
 #include <iostream>
-#include <vector>
+#include <fstream>
+#include <cstdlib>
+
 using namespace std;
 
 int increasingArr(int arr[], int n) {
@@ -22,35 +24,58 @@ int increasingArr(int arr[], int n) {
 }
 
 int main() {
-    int testTabLength = 0;
-    do {
-        cin >> testTabLength;
-        if (cin.fail()) {
-            cin.clear();
-            cin.ignore();
-        }
-    } while (testTabLength < 1 || testTabLength > 25);
 
-    int rowLengths[testTabLength];
-    vector<vector<int>> testData(testTabLength);
+    const char* homeDir = getenv("HOME");
 
-    for (int i = 0; i < testTabLength; i++) {
-    int rowLength = 0;
-        cin >> rowLength;
-        rowLengths[i] = rowLength;
-
-        vector<int> testArray(rowLength);
-        for (int j = 0; j < rowLength; j++) {
-            if (rowLength < 200001) {
-                cin >> testArray[j];
-            }
-            cin.clear();
-            cin.ignore();
-        }
-        testData[i] = testArray;
+    if (homeDir == nullptr) {
+        cerr << "Error getting home directory." << endl;
+        return 1;
     }
-    for( int i = 0 ; i < testTabLength; i++){
-        cout << increasingArr(testData[i].data(), rowLengths[i]) << endl;
+
+    string inputFilePath = string(homeDir) + "/A.in";
+    string outputFilePath = string(homeDir) + "/A.out";
+
+    ifstream inputFile(inputFilePath);
+    ofstream outputFile(outputFilePath);
+
+/*
+    ifstream inputFile("C:\\A.in");
+    ofstream outputFile("C:\\A.out");
+*/
+    if (!inputFile.is_open()) {
+        cerr << "Blad podczas otwierania pliku wejsciowego" << endl;
+        return 1;
     }
+
+    if (!outputFile.is_open()) {
+        cerr << "Blad podczas otwierania pliku wyjsciowego." << endl;
+        return 1;
+    }
+
+    int testAmount;
+    inputFile >> testAmount;
+
+    for (int i = 0; i < testAmount; i++) {
+        int testTabLegth;
+        inputFile >> testTabLegth;
+
+        cout << testTabLegth << endl;
+        int *testTab =  new int[testTabLegth];
+        for (int j=0; j < testTabLegth; j++){
+            inputFile >> testTab[j];
+            cout << testTab[j] << " ";
+        }
+        cout << endl;
+
+        int result = increasingArr(testTab, testTabLegth);
+        cout << result << endl;
+        outputFile << result << endl;
+
+        delete[] testTab;
+    }
+
+    inputFile.close();
+    outputFile.close();
+
     return 0;
 }

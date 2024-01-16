@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -13,7 +14,7 @@ int checkGrowth(const Test& test);
 
 int main() {
 
-/*
+///*
 
     const char* homeDir = getenv("HOME");
 
@@ -28,12 +29,13 @@ int main() {
     ifstream inputFile(inputFilePath);
     ofstream outputFile(outputFilePath);
 
-*/
-///*
+//*/
+/*
     ifstream inputFile("C:\\A.in");
     ofstream outputFile("C:\\A.out");
 
-//*/
+*/
+
 
     if (!inputFile.is_open()) {
         cerr << "Blad podczas otwierania pliku wejsciowego" << endl;
@@ -41,11 +43,11 @@ int main() {
     }
 
     if (!outputFile.is_open()) {
-        cerr << "Blad podczas otwioerania pliku wyjsciowego." << endl;
+        cerr << "Blad podczas otwierania pliku wyjsciowego." << endl;
         return 1;
     }
 
-    int initialGrowth, targetGrowth, testTabLength;
+    int testTabLength;
 
     inputFile >> testTabLength;
 
@@ -62,13 +64,16 @@ int main() {
         }
     }
 
+    inputFile.close();
+    outputFile.close();
+
     return 0;
 }
 
 int checkGrowth(const Test& test){
     int in = test.initialGrowth, out = test.targetGrowth, sh1 = 8, sh2 = 8, counter = 0;
     while(sh1 >= 0 && sh2 >= 0){
-        if(in <= 0){
+        if(in <= 0 || in > 100000 || out > 100000){
             return -1;
         }
         if (in == out){
@@ -77,29 +82,18 @@ int checkGrowth(const Test& test){
             in = in - 100;
             sh2--;
             counter++;
-
-            cout << in << " " << counter << endl;
-
         } else if(in - 100 <= 0){
             in = in * 2;
             sh1--;
             counter++;
-
-            cout << in << " " << counter << endl;
-
         } else if(in < out){
             in = in*2;
             sh1--;
             counter++;
-
-            cout << in << " " << counter <<endl;
-
         } else if (in > out){
             in = in -100;
             sh2--;
             counter++;
-
-            cout << in << " " << counter <<endl;
         }
     }
     return -1;
