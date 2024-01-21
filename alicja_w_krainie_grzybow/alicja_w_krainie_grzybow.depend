@@ -1,6 +1,4 @@
 # depslib dependency file v1.0
-1705404245 source:/home/marek/Pulpit/STUDIA/semestr 1/programowanie/alicja_w_krainie_grzybow/main.cpp
+1705853544 source:/home/marek/Pulpit/STUDIA/semestr 1/programowanie/alicja_w_krainie_grzybow/main.cpp
 	<iostream>
-	<fstream>
-	<cstdlib>
 

@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <cstdlib>
 
 using namespace std;
 
@@ -22,19 +24,44 @@ int increasingArr(int arr[], int n) {
 }
 
 int main() {
+
+    ifstream inputFile("C:\\A.in");
+    ofstream outputFile("C:\\A.out");
+
+    if (!inputFile.is_open()) {
+        cerr << "Blad podczas otwierania pliku wejsciowego" << endl;
+        return 1;
+    }
+
+    if (!outputFile.is_open()) {
+        cerr << "Blad podczas otwierania pliku wyjsciowego." << endl;
+        return 1;
+    }
+
     int testAmount;
-    cin >> testAmount;
+    inputFile >> testAmount;
 
     for (int i = 0; i < testAmount; i++) {
         int testTabLegth;
-        cin >> testTabLegth;
+        inputFile >> testTabLegth;
+
+        cout << testTabLegth << endl;
         int *testTab =  new int[testTabLegth];
         for (int j=0; j < testTabLegth; j++){
-            cin >> testTab[j];
+            inputFile >> testTab[j];
+            cout << testTab[j] << " ";
         }
+        cout << endl;
+
         int result = increasingArr(testTab, testTabLegth);
         cout << result << endl;
+        outputFile << result << endl;
+
         delete[] testTab;
     }
+
+    inputFile.close();
+    outputFile.close();
+
     return 0;
 }
