@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1710779913 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/classInheritance/main.cpp
+	<iostream>
+	"animals.h"
+
+1710780342 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/classInheritance/animals.h
+	<iostream>
+	<string>
+
+1710780342 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/classInheritance/animals.cpp
+	"animals.h"
+
