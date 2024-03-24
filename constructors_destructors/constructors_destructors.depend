@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1711283601 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/constructors_destructors/main.cpp
+	<iostream>
+	"pracownik.h"
+
+1711283231 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/constructors_destructors/pracownik.cpp
+	"pracownik.h"
+	<iostream>
+	<fstream>
+
+1711279576 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/constructors_destructors/pracownik.h
+	<iostream>
+	<string>
+
