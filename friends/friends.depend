@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1712594534 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/friends/main.cpp
+	<iostream>
+	"pracownik.h"
+
+1712595919 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/friends/pracownik.h
+	<string>
+
+1712595919 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/friends/pracownik.cpp
+	"pracownik.h"
+	<iostream>
+
+1712595919 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/friends/manager.cpp
+	"manager.h"
+
+1712595919 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/friends/manager.h
+	"pracownik.h"
+
