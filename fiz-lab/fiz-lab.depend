@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1713698594 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/fiz-lab/main.cpp
+	<fstream>
+	<iostream>
+	<cmath>
+
