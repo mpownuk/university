@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1715619711 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/ryby/main.cpp
+	<iostream>
+	"ryba.h"
+
+1715619786 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/ryby/ryba.cpp
+	<iostream>
+	<cstdlib>
+	<fstream>
+	"ryba.h"
+
+1715618882 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/ryby/ryba.h
+	<iostream>
+

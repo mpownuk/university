@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1715617413 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/pytania/main.cpp
+	<iostream>
+	"pytania.h"
+
+1715617449 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/pytania/pytania.h
+	<iostream>
+

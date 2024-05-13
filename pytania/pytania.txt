@@ -1,0 +1,31 @@
+czy petla DO WHILE 2 warunkiem, wykona jedna iteracje nawet jezeli nie jest spelniony warunek:
+a. nie
+b. tak
+c. taka petla nie istnieje
+d. w takiej petli nie ma warunkow logicznych
+b
+Ktora deklaracja jest poprawna:
+a. int r;
+b. inter;
+c. integer ri
+d. integer:r;
+a
+Ktora deklaracja wykonania iteracji przez petle for jest poprawne:
+a. for(int i=0; i>=10;i++)
+b. for(int i=-0; i>=10;i++)
+c. for(int i-0 : i>=10;i++)
+d. for(int i-0 i>=10 i++)
+a
+Czy metoda w programowniu obiketowym to:
+a. petla
+b, funkcja i procedura
+c. atrybut klasy
+d. klasa
+C
+Czy atrybut w programowaiu obiektowym to:
+a. klasa
+b. zemienna
+funkcja
+C.
+d, atrybut
+b
