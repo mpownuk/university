@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1715703615 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/lecture2/drzewo.cpp
+	<iostream>
+	"drzewo.h"
+
+1715703551 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/lecture2/main.cpp
+	<iostream>
+	"drzewo.h"
+
+1715703551 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/lecture2/drzewo.h
+	<iostream>
+
