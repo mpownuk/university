@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1715794612 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/lecture3/friend.cpp
+	<iostream>
+	"friend.h"
+
+1715794548 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/lecture3/friend.h
+	<iostream>
+
+1715794710 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/lecture3/main.cpp
+	<iostream>
+	"friend.h"
+

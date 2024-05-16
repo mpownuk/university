@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1715876156 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/Lecture4/main.cpp
+	<iostream>
+	"zwierze.h"
+
+1715875793 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/Lecture4/zwierze.h
+	<iostream>
+
+1715875804 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/Lecture4/zwierze.cpp
+	<iostream>
+	"zwierze.h"
+
