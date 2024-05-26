@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1716717564 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/zad6/functionTemplate.cpp
+
+1716750822 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/zad6/main.cpp
+	<iostream>
+	<vector>
+	"functionTemplate.h"
+	"Stos.h"
+
+1716719830 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/zad6/functionTemplate.h
+	<iostream>
+
+1716750278 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/zad6/Stos.h
+	<iostream>
+	<vector>
+
+1716750609 source:/home/marek/Pulpit/STUDIA/semestr 2/programowanie/zad6/Stos.cpp
+	<iostream>
+	<vector>
+	"Stos.h"
+
+1716750110 /home/marek/Pulpit/STUDIA/semestr 2/programowanie/zad6/Stos.cpp
+	<iostream>
+	<vector>
+
